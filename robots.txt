@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /autoloader/
+Disallow: /config/
+Disallow: /controller/
+Disallow: /entity/
+Disallow: /install/
+Disallow: /model/
+Disallow: /services/
+Disallow: /vendor/
+Disallow: /*.jpg$
+Disallow: /*.png$
+Disallow: /*.gif$
+
+Allow: /
+Sitemap : /sitemap.xml

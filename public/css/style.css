@@ -1,0 +1,276 @@
+/*----- COOKIES BANNER -----*/
+div.cookie_policy_msg{
+    width: 100%;
+    background: #111;
+}
+div.cookie_policy_msg>div{
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #999;
+    padding: 10px}
+div.cookie_policy_msg>div>a:first-child{
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px
+}
+div.cookie_policy_msg>div>a:last-child{
+    display: inline-block;
+    margin-left: 20px;
+    height: 28px;
+    width: 32px;
+    color: #fff;
+}
+
+/*----- GENERAL -----*/
+body{overflow-x: hidden;}
+.container, .container-fluid, .row{overflow: hidden;}
+
+/*----- FONTS -----*/
+/* Delaration de la police FontAwesome pour les icones */
+@font-face{
+    font-family: 'FontAwesome';
+    src: url('font-awesome/fonts/FontAwesome.otf') format('otf'),
+    url('font-awesome/fonts/fontawesome-webfont.eot') format('eot'),
+    url('font-awesome/fonts/fontawesome-webfont.svg') format('svg'),
+    url('font-awesome/fonts/fontawesome-webfont.ttf') format('truetype'),
+    url('font-awesome/fonts/fontawesome-webfont.woff') format('woff'),
+    url('font-awesome/fonts/fontawesome-webfont.woff2') format('woff2');
+}
+.fa{font-family: 'FontAwesome';}
+
+/*----- FRONTEND GENERAL -----*/
+.frontend-container{
+    background-image: url("../img/background/denali.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    min-height: 787px;
+}
+
+/*navigation*/
+.frontend .navbar-default{margin-bottom: 0 !important;}
+
+/*header*/
+#frontend-header{
+    background-color: #000;
+    color: #eee;
+    height: 200px;
+}
+#frontend-header h1{
+    font-family: 'IBM Plex Mono', monospace, Arial;
+    text-align: center;
+    line-height: 200px;
+}
+
+/*----- FRONTEND LIST POSTS VIEW / POST VIEW / ALL POST VIEW / COMMENT VIEW-----*/
+#older-posts-btn-section{margin-bottom: 50px;}
+#post-excerpt, #about-view, #post-content, #comment-view-form, #post-view{padding-bottom: 28px;}
+#post-excerpt, #comment-form, #post-view, #about-view, #post-content, #comment-view-form, #comment-view, .legales-mentions, .error-template{
+    background-color: #eee;
+    opacity: 0.9;
+    font-size: 16px;
+}
+#post-view, #comment-form, #post-content, #comment-view{margin-bottom: 30px;}
+#post-excerpt .row, #about-view{margin-top: 25px;}
+#post-content span, #post-excerpt span{display: inline-block;}
+
+/*------ FRONTEND CONTACT VIEW -----*/
+#contact-view{
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: #eee;
+    opacity: 0.9;
+    font-size: 16px;
+}
+textarea{
+    overflow: auto;
+    margin: 0;
+    min-width: 100%;
+    max-width: 100%;
+}
+.message{
+    text-align: right;
+    padding-bottom: 30px;
+}
+.message, .star{
+    color:red;
+}
+/*error page*/
+.error-template{
+    padding: 50px;
+}
+
+/*----- FRONTEND FOOTER -----*/
+#footer{
+    background-color: #373737;
+    width: 100%;
+    padding: 50px 0 65px;
+    bottom: 0;
+}
+footer a{text-decoration: none;}
+footer .list-inline {
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+footer .copyright {
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/*------ FRONTEND ADMIN CONNEXION VIEW -----*/
+#admin-connexion-view{
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: #eee;
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+/*------ ADMIN VIEW -----*/
+/*general*/
+.admin-container{
+    background-image: url("../img/background/alaska.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    min-height: 639px;
+}
+
+/*header*/
+#admin-header{
+    height: 250px;
+    background-image:linear-gradient(to bottom, rgba(115, 162, 192, 0.4), rgba(227, 231, 233, 0.4));
+    filter:progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='rgba(115, 162, 192, 0.4)', endColorstr='rgba(227, 231, 233, 0.4)');
+}
+#admin-header h1{
+    line-height: 250px;
+    text-align: center;
+    font-size: 56px;
+    color: #52708d;
+    text-shadow: 0px 3px 0px rgba(170, 163, 171, 0.9),
+    0px 14px 10px rgba(170, 163, 171, 0.35),
+    0px 24px 2px rgba(170, 163, 171, 0.3),
+    0px 34px 30px rgba(170, 163, 171, 0.3);
+    -webkit-text-shadow: 0px 3px 0px rgba(170, 163, 171, 0.9),
+    0px 14px 10px rgba(170, 163, 171, 0.35),
+    0px 24px 2px rgba(170, 163, 171, 0.3),
+    0px 34px 30px rgba(170, 163, 171, 0.3);
+    -moz-text-shadow: 0px 3px 0px rgba(170, 163, 171, 0.9),
+    0px 14px 10px rgba(170, 163, 171, 0.35),
+    0px 24px 2px rgba(170, 163, 171, 0.3),
+    0px 34px 30px rgba(170, 163, 171, 0.3);
+}
+
+/*navigation*/
+.admin .navbar-default{
+    margin-bottom: 0 !important;
+    background-color: #f0d2b6 !important;
+}
+.admin .navbar-default .navbar-nav > .active > a,
+.admin .navbar-default .navbar-nav > .active > a:hover,
+.admin .navbar-default .navbar-nav > .active > a:focus {
+    color: #f3f5f6 !important;
+    background-color:  #52708d !important;
+}
+.admin .navbar-default .navbar-brand {color: #52708d !important;}
+.admin .navbar-default .navbar-toggle {
+    border-color: #52708d !important;
+}
+.admin .navbar-default .navbar-toggle:hover,
+.admin .navbar-default .navbar-toggle:focus {
+    background-color: #d3e0e8 !important;
+}
+
+/*content*/
+.admin-row{
+    padding-bottom: 25px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.admin-container{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.admin-container .home-row{
+    font-size: 16px;
+    background-color: rgba(214, 227, 235, 0.8);
+}
+.tinymce-post-row, .table-row{
+    background-color: #eee;
+    opacity: 0.9;
+}
+.admin-name-col{
+    height: 30px;
+    margin-bottom: 25px;
+}
+#admin-name{
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(214, 227, 235, 0.8);
+    width: 200px;
+    line-height: 30px;
+}
+
+/*tables*/
+table{background-color: #F8F8F8 !important;}
+th.info{background-color: rgba(113, 162, 192, 0.2)!important;}
+td.success{background-color: rgba(66, 70, 9, 0.1)!important;}
+td.danger{background-color: rgba(119, 65, 97, 0.2)!important;}
+td.warning{background-color: rgba(240, 210, 182, 0.3)!important;}
+td.default{background-color: rgba(249, 237, 230, 0.2)!important;}
+.th{text-align: center;}
+
+/*forms*/
+#moderateCommentForm{
+    background-color: #eee;
+    opacity: 0.8;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 16px;
+}
+.settings-row{
+    background-color: #eee;
+    opacity: 0.8;
+    padding: 15px;
+}
+.settings-form{
+    margin-bottom: 25px;
+}
+
+/*buttons*/
+.admin-container .btn-success{
+    background-color: rgba(66, 70, 9, 0.6)!important;
+    border: none !important;
+}
+.admin-container .btn-danger{
+    background-color: rgba(119, 65, 97, 0.8) !important;
+    border: none !important;
+}
+.admin-container .btn-warning{background-color: #F5DBC1!important;}
+
+/*footer*/
+#admin-footer{
+    background-color: #40341F;
+    width: 100%;
+    padding: 25px 0 33px;
+    bottom: 0;
+}
+#p-top{text-align: center;}
+.fa-arrow-up{color: #52708d;}
+
+/*----- MEDIA QUERIES -----*/
+@media only screen and (max-width: 798px){
+    #frontend-header, #admin-header{display: none;}
+}
+
+@media only screen and (max-width: 1200px){
+    #about-view{margin-top: auto;}
+    #about-view h2{text-align: center;}
+    #about-view img{
+        display: block;
+        margin: 20px auto 20px auto;
+    }
+}
