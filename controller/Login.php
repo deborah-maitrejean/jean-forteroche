@@ -23,7 +23,7 @@ class Login
                     $passHach = password_hash($_POST['password'], PASSWORD_BCRYPT);
                     // vérification des identifiants
                     $loginManager = new LoginManager();
-                    $login = $loginManager->getLogin($_POST['email']);
+                    $login = $loginManager->getLogin(strip_tags($_POST['email']));
                     $psword = $login->getPassword();
 
                     if ($login !== null && password_verify($_POST['password'], $psword)) {
@@ -70,7 +70,7 @@ class Login
         if (isset($_POST['submit']) && isset($_POST['email']) && isset($_POST['newEmail']) && isset($_POST['newEmailVerif'])) {
             if (!empty($_POST['email']) && !empty($_POST['newEmail']) && !empty($_POST['newEmailVerif'])) {
                 $loginManager = new LoginManager();
-                $login = $loginManager->checkLogin($_POST['email']);
+                $login = $loginManager->checkLogin(strip_tags($_POST['email']));
                 $email = $login->getEmail();
                 if ($email != null && $email == $_POST['email']) {
                     if ($_POST['newEmail'] == $_POST['newEmailVerif']) {
@@ -112,13 +112,15 @@ class Login
                     if ($_POST['newPassword'] == $_POST['newPasswordVerif']) {
                         if (strlen($_POST['email']) <= 255 && strlen($_POST['newPassword']) <= 255) {
                             $loginManager = new LoginManager();
-                            $pass = $loginManager->getPass($_POST['email']);
+                            $email = strip_tags($_POST['email']);
+                            $pass = $loginManager->getPass($email);
                             $psword = $pass->getPassword();
+                            $newPassword = $_POST['newPassword'];
 
                             // hachage du nouveau mot de passe
-                            $newPassHash = password_hash($_POST['newPassword'], PASSWORD_BCRYPT);
-                            if (password_verify($_POST['newPassword'], $newPassHash)) {
-                                $loginManager->updatePassword($newPassHash, $_POST['email']);
+                            $newPassHash = password_hash($newPassword, PASSWORD_BCRYPT);
+                            if (password_verify($newPassword, $newPassHash)) {
+                                $loginManager->updatePassword($newPassHash, $email);
                                 $_SESSION['message'] = 'Le mot de passe a été mis à jour.';
                             }
                         } else {
