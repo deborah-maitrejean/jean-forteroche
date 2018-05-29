@@ -24,18 +24,23 @@ class Login
                     // vérification des identifiants
                     $loginManager = new LoginManager();
                     $login = $loginManager->getLogin(strip_tags($_POST['email']));
-                    $psword = $login->getPassword();
 
-                    if ($login !== null && password_verify($_POST['password'], $psword)) {
-                        // l'identification a réussi
-                        $_SESSION['time'] = time();
-                        $_SESSION['email'] = $login->getEmail();
-                        $_SESSION['password'] = $login->getPassword();
-                        $_SESSION['name'] = substr($login->getEmail(), 0, 11);
-                        $_SESSION['connected'] = true;
-                        session_write_close();
+                    if ($login !== null) {
+                        $psword = $login->getPassword();
+                        if (password_verify($_POST['password'], $psword)) {
+                            // l'identification a réussi
+                            $_SESSION['time'] = time();
+                            $_SESSION['email'] = $login->getEmail();
+                            $_SESSION['password'] = $login->getPassword();
+                            $_SESSION['name'] = substr($login->getEmail(), 0, 11);
+                            $_SESSION['connected'] = true;
+                            session_write_close();
 
-                        header('location: index.php?action=adminHomeView');
+                            header('location: index.php?action=adminHomeView');
+                        } else {
+                            $_SESSION['message'] = 'Mauvais identifiants de connexion.';
+                            header('location: index.php?action=adminConnexion');
+                        }
                     } else {
                         $_SESSION['message'] = 'Mauvais identifiants de connexion.';
                         header('location: index.php?action=adminConnexion');
