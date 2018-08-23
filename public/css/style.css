@@ -66,7 +66,7 @@ body{overflow-x: hidden;}
 /*----- FRONTEND LIST POSTS VIEW / POST VIEW / ALL POST VIEW / COMMENT VIEW-----*/
 #older-posts-btn-section{margin-bottom: 50px;}
 #post-excerpt, #about-view, #post-content, #comment-view-form, #post-view{padding-bottom: 28px;}
-#post-excerpt, #comment-form, #post-view, #about-view, #post-content, #comment-view-form, #comment-view, .legales-mentions, .error-template{
+#post-excerpt, #comment-form, #post-view, #about-view, #post-content, #comment-view-form, #add-comment-form, #comment-view, .legales-mentions, .error-template{
     background-color: #eee;
     opacity: 0.9;
     font-size: 16px;
@@ -74,6 +74,10 @@ body{overflow-x: hidden;}
 #post-view, #comment-form, #post-content, #comment-view{margin-bottom: 30px;}
 #post-excerpt .row, #about-view{margin-top: 25px;}
 #post-content span, #post-excerpt span{display: inline-block;}
+#add-comment-form{
+    padding: 15px;
+    border-radius: 3px / 3px;
+}
 
 /*------ FRONTEND CONTACT VIEW -----*/
 #contact-view{
@@ -90,8 +94,9 @@ textarea{
     max-width: 100%;
 }
 .message{
-    text-align: right;
-    padding-bottom: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #eee;
 }
 .message, .star{
     color:red;
