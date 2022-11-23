@@ -10,11 +10,11 @@ use \PDO;
  */
 class Manager
 {
-    private $host = "md285151-001.privatesql";
-    private $dbname = "blogjeanforteroche";
-    private $login = "DisizM18lpU";
-    private $password = "CVNulMno12";
-    private $port = 35467; // j'ai pas ajouté le port dans db connexion
+    private $host = DB_HOST;
+    private $dbname = DB_NAME;
+    private $login = DB_LOGIN;
+    private $password = DB_PASSWORD;
+    private $port = DB_PORT;
 
     protected function dbConnect()
     {
